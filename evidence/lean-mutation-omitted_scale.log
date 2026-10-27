@@ -1,0 +1,71 @@
+work/lean-mutations/omitted_scale.lean:36:28: warning: unused variable `L`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+work/lean-mutations/omitted_scale.lean:171:4: error: Type mismatch
+  congrArg (fun v => WithBot.unbotD 0 (WithBot.map (fun a => a * L) v)) (hg i)
+has type
+  WithBot.unbotD 0
+      (WithBot.map (fun a => a * L)
+        ((Tile.scan ScanOp.sum 0 ScanDirection.forward
+              {
+                data := fun q =>
+                  some
+                    (s.readMem { name := "a" } (s.pids 1 * K + ↑q.2.1) *
+                      s.readMem { name := "dt" }
+                        ((s.pids 2 * T + (s.pids 0 * C + ↑q.1)) * H + (s.pids 1 * K + ↑q.2.1))) }).data
+          i)) =
+    WithBot.unbotD 0
+      (WithBot.map (fun a => a * L)
+        (some
+          (∑ k with ↑k ≤ ↑i.1,
+            s.readMem { name := "a" } (s.pids 1 * K + ↑(k, i.2).2.1) *
+              s.readMem { name := "dt" }
+                ((s.pids 2 * T + (s.pids 0 * C + ↑(k, i.2).1)) * H + (s.pids 1 * K + ↑(k, i.2).2.1)))))
+but is expected to have type
+  WithBot.unbotD 0
+      ((Tile.scan ScanOp.sum 0 ScanDirection.forward
+            {
+              data := fun i =>
+                some
+                  (s.readMem { name := "a" } (s.pids 1 * K + ↑i.2.1) *
+                    s.readMem { name := "dt" }
+                      ((s.pids 2 * T + (s.pids 0 * C + ↑i.1)) * H + (s.pids 1 * K + ↑i.2.1))) }).data
+        i) =
+    (∑ x with x ≤ i.1,
+        s.readMem { name := "a" } (s.pids 1 * K + ↑i.2.1) *
+          s.readMem { name := "dt" } ((s.pids 2 * T + (s.pids 0 * C + ↑x)) * H + (s.pids 1 * K + ↑i.2.1))) *
+      L
+work/lean-mutations/omitted_scale.lean:174:4: error: Type mismatch
+  congrArg (fun v => WithBot.unbotD 0 (WithBot.map (fun a => a * L) v)) (hg i)
+has type
+  WithBot.unbotD 0
+      (WithBot.map (fun a => a * L)
+        ((Tile.scan ScanOp.sum 0 ScanDirection.forward
+              {
+                data := fun q =>
+                  some
+                    (s.readMem { name := "a" } (s.pids 1 * K + ↑q.2.1) *
+                      s.readMem { name := "dt" }
+                        ((s.pids 2 * T + (s.pids 0 * C + ↑q.1)) * H + (s.pids 1 * K + ↑q.2.1))) }).data
+          i)) =
+    WithBot.unbotD 0
+      (WithBot.map (fun a => a * L)
+        (some
+          (∑ k with ↑k ≤ ↑i.1,
+            s.readMem { name := "a" } (s.pids 1 * K + ↑(k, i.2).2.1) *
+              s.readMem { name := "dt" }
+                ((s.pids 2 * T + (s.pids 0 * C + ↑(k, i.2).1)) * H + (s.pids 1 * K + ↑(k, i.2).2.1)))))
+but is expected to have type
+  WithBot.unbotD 0
+      ((Tile.scan ScanOp.sum 0 ScanDirection.forward
+            {
+              data := fun i =>
+                some
+                  (s.readMem { name := "a" } (s.pids 1 * K + ↑i.2.1) *
+                    s.readMem { name := "dt" }
+                      ((s.pids 2 * T + (s.pids 0 * C + ↑i.1)) * H + (s.pids 1 * K + ↑i.2.1))) }).data
+        i) =
+    (∑ x with x ≤ i.1,
+        s.readMem { name := "a" } (s.pids 1 * K + ↑i.2.1) *
+          s.readMem { name := "dt" } ((s.pids 2 * T + (s.pids 0 * C + ↑x)) * H + (s.pids 1 * K + ↑i.2.1))) *
+      L

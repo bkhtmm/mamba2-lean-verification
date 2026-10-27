@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "checked_files_sha256": {
+    "lean-toolchain": "651c8accb402b0c071cd336e9d3dc0a55516b1bfb434ddc4801f14936785b1d2",
+    "lakefile.toml": "9d7eae7687ba9d2befe3ac9379bfefe8377ce20d69936352872c1d43c4cc3afc",
+    "lake-manifest.json": "8725187e14256de1f5852df9e2d647a2fe54d6adbac5684423fb7c902d31f7cb",
+    "Mamba2.lean": "9ba44a28910243c5d39041ede71f710f1f0ef06c4c912eaecd6f18b1c5074c26",
+    "Audit.lean": "74df4efaab254c1b8dbecc1b75f7f27df0ff0839111f4fb908ad4c066c6a0b39",
+    "vendor/mamba2.py": "0742e95b8c84fc1d88833feacd1c86aca75e6f892192e5832bf19088a59cc811",
+    "Mamba2/Algebra.lean": "476392ad5add17b9bea9cb87009b99cd3e3714b74f796cb3b2328708385379f3",
+    "Mamba2/ChunkCumsum.lean": "3255b65379a6c1f365f538cc1444ac99ce11e8f7fe5a716c0c1deb1379083552",
+    "Mamba2/Indexing.lean": "3a5fad60f243e2e988d769d61c9772b523cc0ab9dd52389fac3c530be1cf0d3a",
+    "Mamba2/Layout.lean": "ae735a1aaa61e4a0a60280a03fa6f7d525527edbf797bdd0a2aca23238f4dbf0",
+    "scripts/check.py": "b76679fe7f1ee64f861a4cf70662b1beba5286f8490ab2c96956eb7814846cc8",
+    "scripts/lean_mutations.py": "999202ad29c8ac6e6a225538817b22e58fcb2c383b3208720709fcee4c7008be",
+    "scripts/source_differential.py": "8a7451f23438d98057ef9a7c87a9b7a3e2c2189c9dbdd32a93b57d987d19dd56"
+  },
+  "evidence_kind": "Lean model proofs plus idealized CPU source tests",
+  "date": "2026-10-27",
+  "lean": "Lean (version 4.29.0, arm64-apple-darwin24.6.0, commit 98dc76e3c0a9b856c9b98726b713fb04fab16740, Release)",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "source_sha256": "0742e95b8c84fc1d88833feacd1c86aca75e6f892192e5832bf19088a59cc811",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "evidence/lean-build.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "Audit.lean"
+      ],
+      "exit_code": 0,
+      "log": "evidence/axiom-audit.log"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-W",
+        "error",
+        "scripts/source_differential.py",
+        "--json",
+        "evidence/source-differential.json"
+      ],
+      "exit_code": 0,
+      "log": "evidence/source-differential.log"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "scripts/lean_mutations.py"
+      ],
+      "exit_code": 0,
+      "log": "evidence/lean-mutations.log"
+    }
+  ],
+  "gpu_execution": false,
+  "independent_lean_kernel_recheck": false,
+  "warning": "No proof of cuTile translation, machine floating-point accuracy, compiler correctness or hardware race freedom."
+}

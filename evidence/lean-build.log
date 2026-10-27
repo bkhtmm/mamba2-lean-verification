@@ -1,0 +1,103 @@
+⚠ [2624/3067] Replayed VeriTile.Triton.Semantics.EvalOp
+warning: VeriTile/Triton/Semantics/EvalOp.lean:287:8: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵e̵v̵a̵l̵O̵p̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:295:8: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:460:8: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵e̵v̵a̵l̵O̵p̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:465:9: unused variable `hName`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:475:8: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵BlockState.setReg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:482:8: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:488:8: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵hName, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:494:8: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵hName, hDType, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:509:9: unused variable `hName`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:525:14: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵BlockState.setReg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:526:14: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵BlockState.setReg, hShape]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:527:12: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵BlockState.setReg, hDType]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: VeriTile/Triton/Semantics/EvalOp.lean:528:10: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵BlockState.setReg, hName]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2626/3067] Replayed VeriTile.Triton.Semantics.Step
+warning: VeriTile/Triton/Semantics/Step.lean:938:8: This simp argument is unused:
+  evalOp
+
+Hint: Omit it from the simp argument list.
+  simp [e̵v̵a̵l̵O̵p̵,̵ ̵Tile.bop, NumericDType.add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2636/3067] Replayed VeriTile.Triton.Semantics.BlockPtrEval
+warning: VeriTile/Triton/Semantics/BlockPtrEval.lean:69:25: This simp argument is unused:
+  Option.bind
+
+Hint: Omit it from the simp argument list.
+  simp only [evalOp, hp,̵ ̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3328/3335] Replayed VeriTile.Triton.Math.Attention
+warning: VeriTile/Triton/Math/Attention.lean:442:46: `Fin.coe_cast` has been deprecated: Use `Fin.val_cast` instead
+Build completed successfully (3335 jobs).

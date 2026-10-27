@@ -1,0 +1,2 @@
+# CPU differential source simulation only; no CUDA dependency.
+numpy==2.0.2

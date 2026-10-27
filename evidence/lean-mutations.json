@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "baseline_exit_code": 0,
+  "negative_controls": [
+    {
+      "mutation": "wrong_scan_axis",
+      "detected": true,
+      "lean_exit_code": 1,
+      "change": {
+        "from": "tl.cumsum(z, axis=0)",
+        "to": "tl.cumsum(z, axis=1)"
+      },
+      "log": "evidence/lean-mutation-wrong_scan_axis.log"
+    },
+    {
+      "mutation": "omitted_scale",
+      "detected": true,
+      "lean_exit_code": 1,
+      "change": {
+        "from": "tl.cumsum(z, axis=0) * $(L)",
+        "to": "tl.cumsum(z, axis=0)"
+      },
+      "log": "evidence/lean-mutation-omitted_scale.log"
+    }
+  ],
+  "meaning": "Existing proof scripts fail after changing only the kernel body; no hardware or translation proof."
+}

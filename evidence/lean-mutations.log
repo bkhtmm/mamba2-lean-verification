@@ -1,0 +1,1 @@
+PASS: baseline compiles; wrong scan axis and omitted scale rejected by Lean proof checks.

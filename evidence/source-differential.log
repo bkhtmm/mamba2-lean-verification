@@ -1,0 +1,2 @@
+PASS: 4 source pipeline cases, 64 branch combinations, 2 direct prefix padding cases; 3 negative controls detected.
+CPU simulation only. Identity casts; no GPU execution, IEEE proof or GPU error bound.
