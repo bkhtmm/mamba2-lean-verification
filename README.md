@@ -21,7 +21,6 @@ See the [specification](docs/specification.md), [source-to-model correspondence]
 
 - Target: [NVIDIA/TileGym `mamba2.py`](https://github.com/NVIDIA/TileGym/blob/3a871364f1fbd59ef30b1afcc5a79fc3634888ce/src/tilegym/ops/cutile/mamba2.py), commit `3a871364f1fbd59ef30b1afcc5a79fc3634888ce`. The unmodified module is included in [`vendor/mamba2.py`](vendor/mamba2.py).
 - Lean `v4.29.0` and Mathlib `v4.29.0`. All dependency revisions are pinned in [`lake-manifest.json`](lake-manifest.json).
-- Third-party attribution and license notices: [`THIRD_PARTY.md`](THIRD_PARTY.md).
 
 ## Reproduce
 

@@ -3,8 +3,7 @@
   "date": "2026-10-28",
   "project": "Mamba-2 Lean model verification",
   "files": {
-    "README.md": "c7122d1f434258fbf9aa2dee656ac2a152bc46c57a1c34ee5e7f681d025abf88",
-    "THIRD_PARTY.md": "c3c478586dd5dd9d4f1319ed1d12fe61b53f2fcc56eb26bf7f969c59667eddba",
+    "README.md": "f590bbc3e3f140996b06deeca30394881fb987b3e98024404a252a67a6c2e0d2",
     ".gitignore": "424570ecde089745ba6df31dd54856a18b0d37f7b68749e4836d91fecfb37816",
     "lean-toolchain": "651c8accb402b0c071cd336e9d3dc0a55516b1bfb434ddc4801f14936785b1d2",
     "lakefile.toml": "9d7eae7687ba9d2befe3ac9379bfefe8377ce20d69936352872c1d43c4cc3afc",
@@ -32,7 +31,7 @@
     "evidence/relocation.json": "cd1259f70f6aa97b2d53c27f6c805f29d116e7bcb2c025cb7119386e9d44ca49",
     "evidence/source-differential.json": "d0eff36f3cc8e723006e7f06c4d14a20360a7e382cc0d70db65bddb87f07c774",
     "evidence/source-differential.log": "b3c6cf07a6419d4416e14bff954fc44cf3b3748219f55f1e44dd0e0488b7b5e1",
-    "evidence/source-links.json": "263ce9bcbc4f83c42d4a8415e63dec2a1c149578eb83edf3579a90374be189e6",
+    "evidence/source-links.json": "5e01a3f11940381708943663acfe43b109854ba90e80c2aa041c0cd8e193f67a",
     "evidence/verification-status.json": "1c00c2a8d7747197774f2dbecb06455e1897c1e2ab2f8fb918f272cda5b3e362",
     "vendor/TileGym-LICENSE": "069c31726611326e3ff5445a29f4aa4a017ecf61310a3b0ec8e0dbf85f123e5d",
     "vendor/VeriTile-LICENSE": "62bbae921c56d3f83ac3311f94c2836f5ce6f69b36ccfa05258d7a151214f6c6",

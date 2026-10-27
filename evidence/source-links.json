@@ -23,19 +23,5 @@
       "src/tilegym/ops/cutile/mamba2.py": "0742e95b8c84fc1d88833feacd1c86aca75e6f892192e5832bf19088a59cc811",
       "tests/ops/test_mamba2.py": "2ef9f5cfbf2ba69196cd719bb9d6bd46648a9380a42cc1a817d60498c644fb7d"
     }
-  },
-  "veritile": {
-    "repository": "https://github.com/VeriInfra-Lab/VeriTile",
-    "revision": "16abbb7e77bf111bf7ede620ec6bf91744e7325b",
-    "commit_date": "2026-10-14T22:33:32+08:00",
-    "license": "MIT, copyright 2026 Zenan Li",
-    "lean_toolchain": "leanprover/lean4:v4.29.0",
-    "file_sha256": {
-      "README.md": "2738cf0367a9e6359881cf970a25a92cc6d3f7bba1265458e510ce9241d5dd98",
-      "LICENSE": "62bbae921c56d3f83ac3311f94c2836f5ce6f69b36ccfa05258d7a151214f6c6",
-      "lean-toolchain": "651c8accb402b0c071cd336e9d3dc0a55516b1bfb434ddc4801f14936785b1d2",
-      "VeriTile/Triton/Semantics/TileOps.lean": "c782c23d96d8faf55f1e1b85a4bf26f92ce8d6c84bfc41b9fad320f7068435eb",
-      "VeriTile/Triton/Float/RoundingModel.lean": "daf9e33b135dada924c82ff35858160eccee563486eaa3c0806698647821a673"
-    }
   }
 }
