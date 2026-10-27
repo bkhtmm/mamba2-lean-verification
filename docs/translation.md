@@ -4,7 +4,7 @@ Target: [NVIDIA/TileGym mamba2.py at 3a871364f1fbd59ef30b1afcc5a79fc3634888ce](h
 
 ## Prefix-kernel normalization
 
-`Mamba2/ChunkCumsum.lean` manually represents a complete `chunk_cumsum_kernel` tile in VeriTile's exact-real operational semantics. The leading singleton batch dimension is removed, so the source token axis 1 becomes model axis 0 of a `[C,K]` tile. The model is intentionally for full token and head tiles, with contiguous scalar-element BTH/BHT linearization. The original array API supports strides; this project does not prove a general strided-memory refinement.
+`Mamba2/ChunkCumsum.lean` manually represents a complete `chunk_cumsum_kernel` tile using exact-real operational semantics. The leading singleton batch dimension is removed, so the source token axis 1 becomes model axis 0 of a `[C,K]` tile. The model is intentionally for full token and head tiles, with contiguous scalar-element BTH/BHT linearization. The original array API supports strides; this project does not prove a general strided-memory refinement.
 
 | Pinned source operation | Lean representation | Status |
 |---|---|---|
@@ -22,7 +22,7 @@ Target: [NVIDIA/TileGym mamba2.py at 3a871364f1fbd59ef30b1afcc5a79fc3634888ce](h
 
 The [official load documentation](https://docs.nvidia.com/cuda/cutile-python/generated/cuda.tile.load.html) defines `order` as a permutation of array axes before tiling; the [store documentation](https://docs.nvidia.com/cuda/cutile-python/generated/cuda.tile.store.html) defines bounded tile stores. The CPU simulator implements these conventions manually. It has not been certified against cuTile.
 
-The region model gives named, separate memory buffers and natural-number offsets. Full-cell frame claims concern that model. `Mamba2/Layout.lean` proves contiguous scalar address bounds, and `Mamba2/Indexing.lean` proves coverage and unique ownership. These theorems do not themselves establish CUDA race freedom, byte-level memory safety, finite-width address arithmetic, runtime alias checks, or a formal concurrent whole-grid execution. This project does not claim VeriTile's flat-memory `TraceSafe`/`FlattenOk` bridge has been instantiated for this kernel.
+The region model gives named, separate memory buffers and natural-number offsets. Full-cell frame claims concern that model. `Mamba2/Layout.lean` proves contiguous scalar address bounds, and `Mamba2/Indexing.lean` proves coverage and unique ownership. These theorems do not themselves establish CUDA race freedom, byte-level memory safety, finite-width address arithmetic, runtime alias checks, or a formal concurrent whole-grid execution. A flat-memory `TraceSafe`/`FlattenOk` bridge has not been instantiated for this kernel.
 
 ## State and output stages
 
@@ -42,5 +42,3 @@ The state jump theorem covers arbitrary start, chunk length and incoming state. 
 | Logical tile grid → coordinate ownership and full-tile bounds | Lean natural-number theorems |
 | Original selected Python bodies → sequential reference | CPU differential tests, casts idealized, finite samples |
 | cuTile compiler → compiled program → NVIDIA hardware | Not validated in this environment |
-
-This division follows RESOLVE's useful discipline of distinguishing tested links from proved links. It does not mean we ran RESOLVE or reproduced its binary instrumentation or F*/Pulse proofs.

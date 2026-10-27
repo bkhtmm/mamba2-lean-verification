@@ -20,7 +20,7 @@ See the [specification](docs/specification.md), [source-to-model correspondence]
 ## Source and dependencies
 
 - Target: [NVIDIA/TileGym `mamba2.py`](https://github.com/NVIDIA/TileGym/blob/3a871364f1fbd59ef30b1afcc5a79fc3634888ce/src/tilegym/ops/cutile/mamba2.py), commit `3a871364f1fbd59ef30b1afcc5a79fc3634888ce`. The unmodified module is included in [`vendor/mamba2.py`](vendor/mamba2.py).
-- Lean `v4.29.0`; [VeriTile](https://github.com/VeriInfra-Lab/VeriTile) commit `16abbb7e77bf111bf7ede620ec6bf91744e7325b`; Mathlib `v4.29.0`. Dependency revisions are pinned in [`lake-manifest.json`](lake-manifest.json).
+- Lean `v4.29.0` and Mathlib `v4.29.0`. All dependency revisions are pinned in [`lake-manifest.json`](lake-manifest.json).
 - Third-party attribution and license notices: [`THIRD_PARTY.md`](THIRD_PARTY.md).
 
 ## Reproduce
@@ -40,10 +40,6 @@ The check script builds the Lean project, audits theorem axiom footprints and sp
 
 ## Verification boundary
 
-The prefix theorem concerns a manually normalized full tile in VeriTile's exact-real, named-region semantics. It does not prove the normalization itself, instantiate a flat-memory or concurrent CUDA execution model, or cover arbitrary tensor strides. The state and output results are mathematical identities; operational correctness of their complete source kernels is not proved.
+The prefix theorem concerns a manually normalized full tile under exact-real, named-region semantics. It does not prove the normalization itself, instantiate a flat-memory or concurrent CUDA execution model, or cover arbitrary tensor strides. The state and output results are mathematical identities; operational correctness of their complete source kernels is not proved.
 
 CPU checks execute selected original Python function bodies using a manually implemented tile API, identity casts and float64 arithmetic. They are sampled differential tests, not GPU executions or floating-point error bounds. Host wrappers, autotuner selection, persistent scheduling and backward kernels are not verified. No supported-input upstream bug was identified.
-
-## Related work
-
-This project reuses VeriTile's tile semantics, execution and memory lemmas, and proof-audit commands. [RESOLVE](https://arxiv.org/html/2610.05683v1) informs the separation of tested source correspondences from proved mathematical properties; its instrumentation and F*/Pulse tooling were not run here.

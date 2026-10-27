@@ -30,10 +30,6 @@
     "commit_date": "2026-10-14T22:33:32+08:00",
     "license": "MIT, copyright 2026 Zenan Li",
     "lean_toolchain": "leanprover/lean4:v4.29.0",
-    "scope_url": "https://github.com/VeriInfra-Lab/VeriTile/blob/16abbb7e77bf111bf7ede620ec6bf91744e7325b/documents/SemanticCaveats.md",
-    "rounding_url": "https://github.com/VeriInfra-Lab/VeriTile/blob/16abbb7e77bf111bf7ede620ec6bf91744e7325b/VeriTile/Triton/Float/RoundingModel.lean",
-    "scan_semantics_url": "https://github.com/VeriInfra-Lab/VeriTile/blob/16abbb7e77bf111bf7ede620ec6bf91744e7325b/VeriTile/Triton/Semantics/TileOps.lean",
-    "trust_url": "https://github.com/VeriInfra-Lab/VeriTile/blob/16abbb7e77bf111bf7ede620ec6bf91744e7325b/site/src/content/docs/proofs/trust-audit.md",
     "file_sha256": {
       "README.md": "2738cf0367a9e6359881cf970a25a92cc6d3f7bba1265458e510ce9241d5dd98",
       "LICENSE": "62bbae921c56d3f83ac3311f94c2836f5ce6f69b36ccfa05258d7a151214f6c6",
@@ -41,26 +37,5 @@
       "VeriTile/Triton/Semantics/TileOps.lean": "c782c23d96d8faf55f1e1b85a4bf26f92ce8d6c84bfc41b9fad320f7068435eb",
       "VeriTile/Triton/Float/RoundingModel.lean": "daf9e33b135dada924c82ff35858160eccee563486eaa3c0806698647821a673"
     }
-  },
-  "resolve": {
-    "paper_url": "https://arxiv.org/html/2610.05683v1",
-    "version": "arXiv:2610.05683v1",
-    "submitted_date": "2026-10-05",
-    "paper_license": "CC BY 4.0 (paper page metadata)",
-    "formal_framework": "F*/Pulse via Kuiper, not Lean",
-    "public_repository": "Not located: supplied paper HTML has no RESOLVE code/artifact URL, and targeted primary-source repository/web searches did not locate one. This is not evidence no public code exists.",
-    "claim_boundary": "Original-to-reduced and reduced-to-Kuiper are tested bitwise links; formal proof concerns common algebraic specification under idealized arithmetic. No race-freedom proof from clean determinism tests."
-  },
-  "kuiper": {
-    "repository": "https://github.com/FStarLang/kuiper",
-    "revision": "93e8e732c245559dce443bbe8261808b6e9e3a6c",
-    "role": "Public framework used by RESOLVE, not the RESOLVE implementation/artifact",
-    "license_status": "No root LICENSE/COPYING file was found in inspected checkout; do not assume a software redistribution license.",
-    "checked_build": false
-  },
-  "kuiperbench": {
-    "repository": "https://github.com/mtzguido/kuiperbench",
-    "head_observed": "4da5a6c71a652bd7ad1da88c04f39100df88dd33",
-    "role": "Public verified-kernel corpus mentioned in RESOLVE; repository HEAD queried only, not built."
   }
 }

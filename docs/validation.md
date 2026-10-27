@@ -14,7 +14,7 @@ The recorded verification run completed on 27 October 2026 with Lean v4.29.0, Py
 
 The axiom audit checks all project theorem declarations, including generated declarations, against Lean's standard base: `propext`, `Classical.choice`, and `Quot.sound`. This is an axiom-footprint audit, not an independent implementation of the Lean kernel. Specification independence is a structural check, not a proof that the chosen specification captures every intended requirement.
 
-The project's Lean files compile without warnings. Some imported VeriTile modules emit linter warnings. Errors in mutation logs are expected negative-control results; the unmodified baseline compiles first.
+The project's Lean files compile without warnings. Some imported dependency modules emit linter warnings. Errors in mutation logs are expected negative-control results; the unmodified baseline compiles first.
 
 A second complete check ran from a fresh project source directory without copied project oleans, reusing the pinned dependency cache. Checked-file hashes matched: [relocation record](../evidence/relocation.json). This was not a fresh network download of dependencies.
 
@@ -29,7 +29,7 @@ A second complete check ran from a fresh project source directory without copied
 
 Results: [source differential record](../evidence/source-differential.json). Casts are identities and arithmetic uses float64, with absolute/relative comparison tolerances of `2e-12`. These tolerances check simulator consistency; they are not GPU error bounds. Some small source-body configurations are outside production autotuner choices.
 
-No cuTile compiler, NVIDIA GPU, sanitizer, NVBit or RESOLVE campaign was executed. Host wrappers, autotuner selection, persistent scheduling, and backward kernels are not executed by the harness. The source-to-Lean translation and tile API are manual and are not certified by these samples. No supported-input upstream bug was identified.
+No cuTile compiler, NVIDIA GPU or sanitizer campaign was executed. Host wrappers, autotuner selection, persistent scheduling, and backward kernels are not executed by the harness. The source-to-Lean translation and tile API are manual and are not certified by these samples. No supported-input upstream bug was identified.
 
 ## Reproduction
 
